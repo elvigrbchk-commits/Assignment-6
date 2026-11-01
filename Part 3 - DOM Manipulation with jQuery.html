@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Part 3. DOM Manipulation with jQuery</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+    </head>
+    <body>
+       <nav class="navbar bg-1 fg-2">
+        <div class="container-fluid">
+            <a class="navbar-brand px-10" href="index.html">Assignment 6</a>
+            <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" aria-hidden="true"></span>
+            </button>
+            <dialog class="drawer drawer-end" tabindex="-1" id="navbarTogglerDemo02" aria-labelledby="navbarTogglerDemo02Label">
+            <div class="drawer-header">
+                <h5 class="drawer-title" id="navbarTogglerDemo02Label">jQuery</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+            </div>
+            <div class="drawer-body">
+                <ul class="navbar-nav me-auto mb-2">
+                <li class="nav-item"><a class="nav-link" href="index.html">Part 1. Getting Started with jQuery</a></li>
+                <li class="nav-item"><a class="nav-link" href="Part 2 - jQuery Effects.html">Part 2. jQuery Effects</a></li>
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="Part 3 - DOM Manipulation with jQuery.html">Part 3. DOM Manipulation with jQuery</a></li>
+                <li class="nav-item"><a class="nav-link" href="Part 4 - Animation.html">Part 4. Animations</a></li>
+                <li class="nav-item"><a class="nav-link" href="Part 5 - Mini-project.html">Part 5. Mini Project</a></li>                
+                </ul>
+            </div>
+            </dialog>
+        </div>
+        </nav>
+        <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
+            <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                console.log("jQuery is ready!")
+                $("#2img").css("transform", "scaleX(-1)")
+                $("#addLast").on("click", function(){$("#list").append($("<li>").text("Macaws"))})
+                $("#addFirst").on("click", function(){$("#list").prepend($("<li>").text("Cockatoos"))})
+                $("#remove").on("click", function(){$("#list li:last").remove()})
+                $("#fly").on("click", function(){if ($("#2img").attr("src") === "images/parrot1.jpg.avif"){
+                    $("#2img").attr("src", "images/parrot2.jpg")}else{
+                    $("#2img").attr("src", "images/parrot1.jpg.avif")
+                    }
+                })
+
+                $("#bt-link").on("click", function(){if ($("#link").attr("href") === "https://en.wikipedia.org/wiki/Macaw"){
+                    $("#link").attr("href", "https://en.wikipedia.org/wiki/Cockatoo");
+                    $("#link").text("About Cockatoos")}else{
+                    $("#link").attr("href", "https://en.wikipedia.org/wiki/Macaw");
+                    $("#link").text("About Macaws")
+                    }
+                })
+
+                $("#name, #email").on("input", function(){
+                    $("#input").html(
+                        "<b>Name: </b>" + $("#name").val() + "<br><b>Email: </b>" + $("#email").val()
+                    )
+                })
+            })
+        </script>
+        <div class="d-flex flex-column align-items-start gap-3">
+            <h1 class="px-10 mt-10">List of parrots:</h1>
+            <ul id="list" class="px-10 ms-10"></ul>
+            <div class="btn-group px-10" role="group" aria-label="Accent theme example">
+                <button type="button" class="btn-solid theme-accent px-5" id="addLast">Add item</button>
+                <button type="button" class="btn-solid theme-accent px-5" id="addFirst">Add first item</button>
+                <button type="button" class="btn-solid theme-accent px-5" id="remove">Remove item</button>
+            </div>
+
+            <img src="images/parrot1.jpg.avif" id="2img" class="rounded ms-10 mt-10" style="width: 380px; transform: scaleX(-1);">
+            <button type="button" class="btn-solid theme-accent px-5 ms-10 mt-5" id="fly">Fly!</button>
+        
+            <a href="https://en.wikipedia.org/wiki/Macaw" id="link" class="px-10 mt-10 mb-5">About Macaws</a>
+            <button type="button" class="btn-solid theme-accent px-5 ms-10" id="bt-link">Macaws/Cockatoos</button>
+        
+
+            <form class="ms-10 mt-10">
+                <label for="name"></label>
+                <input type="text" id="name" placeholder="Name">
+                <label for="email"></label>
+                <input type="email" id="email" placeholder="Email" size="40">
+            </form>
+            <p id="input" class="ms-10"></p>
+        </div>
+    
+    </body>
+</html>
