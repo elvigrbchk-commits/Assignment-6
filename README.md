@@ -1,5 +1,5 @@
 # Assignment-6
-##jQuery (Selectors, Effects, Animations)
+## jQuery (Selectors, Effects, Animations)
 
 **Description**
 This project demonstrates the use of jQuery for DOM manipulation, event handling, effects, and animations.
