@@ -2,7 +2,7 @@
 ## jQuery (Selectors, Effects, Animations)
 
 **Description**
-This project demonstrates the use of jQuery for DOM manipulation, event handling, effects, and animations.
+-This project demonstrates the use of jQuery for DOM manipulation, event handling, effects, and animations.
 
 **Technologies**
 - HTML5
@@ -12,11 +12,11 @@ This project demonstrates the use of jQuery for DOM manipulation, event handling
 - Bootstrap
 
 **Project Structure**
-index.html — Part 1: Getting Started with jQuery
-Part 2 - jQuery Effects.html — Part 2: Effects
-Part 3 - DOM Manipulation with jQuery.html — Part 3: DOM Manipulation
-Part 4 - Animation.html — Part 4: Animations
-Part 5 - Mini-project.html — Part 5: Bouncing Ball
+- index.html — Part 1: Getting Started with jQuery
+- Part 2 - jQuery Effects.html — Part 2: Effects
+- Part 3 - DOM Manipulation with jQuery.html — Part 3: DOM Manipulation
+- Part 4 - Animation.html — Part 4: Animations
+- Part 5 - Mini-project.html — Part 5: Bouncing Ball
 
 **How to Run**
 1. Clone or download the repository.
