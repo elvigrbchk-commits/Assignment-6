@@ -2,7 +2,7 @@
 ## jQuery (Selectors, Effects, Animations)
 
 **Description**
--This project demonstrates the use of jQuery for DOM manipulation, event handling, effects, and animations.
+- This project demonstrates the use of jQuery for DOM manipulation, event handling, effects, and animations.
 
 **Technologies**
 - HTML5
